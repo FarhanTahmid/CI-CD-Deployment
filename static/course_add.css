@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.course{
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #00bcd4;
+  background-size: cover;
+}
+
+.course .content
+{
+  max-width: 800px;
+  text-align: center;
+}
+
+.course .content h2
+{
+  font-size: 36px;
+  font-weight: 500;
+  color: white;
+}
+
+.course .content p
+{
+  font-weight: 300;
+  color: white;
+}
+
+
+.course_add_form
+{
+  width: 40%;
+  padding: 40px;
+  background: white;
+}
+
+.course_add_form h2
+{
+  foont-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+
+.course_add_form .inputBox
+{
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.course_add_form .inputBox input,
+.course_add_form .inputBox textarea
+{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.course_add_form .inputBox span
+{
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.course_add_form .inputBox input:focus ~ span,
+.course_add_form .inputBox input:valid ~ span,
+.course_add_form .inputBox textarea:focus ~ span,
+.course_add_form .inputBox textarea:valid ~ span
+{
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.course_add_form .inputBox input[type="submit"]
+{
+  width: 100px;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+@media (max-width: 991px)
+{
+  .course
+  {
+    padding: 50px;
+  }
+  .course_add_form
+  {
+    width: 100%;
+  }
+}

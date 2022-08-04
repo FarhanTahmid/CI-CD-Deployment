@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create your Account</title>
+    <link rel="stylesheet" href="{% static 'sign_up.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="title">SignUp Form</div>
+
+        <form method="POST" action="signup">
+            {% csrf_token %}
+            <div class="user-details">
+                <div class="inputBox">
+                    <span class="details">Full Name</span>
+                    <input type="text" name="fullname" placeholder="Enter Your Full Name" required>
+                </div>
+                <div class="inputBox">
+                    <span class="details">ID</span>
+                    <input type="text" name="id" placeholder="Enter Your ID" required>
+                </div>
+                <div class="inputBox">
+                    <span class="details">Email</span>
+                    <input type="text" name="email" placeholder="Enter Your Email" required>
+                </div>
+                <div class="inputBox">
+                    <span class="details">Password</span>
+                    <input type="password" name="password" placeholder="Enter a strong password" required>
+                </div>
+                <div class="inputBox">
+                    <span class="details">Confirm Password</span>
+                    <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="SignUp">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+

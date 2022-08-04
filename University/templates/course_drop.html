@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Course Add/Drop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'course_drop.css' %}">
+  </head>
+  <body>
+    <section class = "course">
+      <div class="content">
+        <h2>Drop Course</h2>
+        <p>Please, select the courses you want to drop.</p>
+      </div>
+        <div class="course_drop_form">
+          <form method="POST">
+            {% csrf_token %}
+            <div class="inputBox">
+              <input type="text" name="courseID" required="required">
+              <span>Course ID</span>
+            </div>
+            <div class="inputBox">
+              <input type="submit" name="" value="Submit">
+            </div>
+          </form>
+        </div>
+    </section>
+  </body>
+</html>
