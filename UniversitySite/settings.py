@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-
+WSGI_APPLICATION = 'UniversitySite.wsgi.application'
 
 
 # Database
