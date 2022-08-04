@@ -1,1 +1,1 @@
-web:gunicorn UniversitySite.wsgi
+web:gunicorn UniversitySite.wsgi.application
